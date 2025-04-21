@@ -8,6 +8,11 @@
     overflow-x: hidden;
 }
 
+.fa-bars,
+.fa-x {
+    padding: 20px;
+}
+
 :root {
     --white-card: #f9f9f9;
     --blue-1: #e4e8ff;
