@@ -23,6 +23,7 @@
     --base-font: 1rem;
 }
 
+html,
 body {
     background-color: var(--blue-1);
     overflow-x: hidden;
