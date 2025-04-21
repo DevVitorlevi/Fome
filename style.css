@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins';
-    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 :root {
