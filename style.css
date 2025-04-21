@@ -239,7 +239,6 @@ header {
     padding: 0.75rem;
     background-color: var(--white-card);
     border-radius: 0.625rem;
-    box-shadow: 0 0 0.75rem 0.25rem rgba(0, 0, 0, 0.1);
 }
 
 .review-content span {
