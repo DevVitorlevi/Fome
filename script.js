@@ -20,7 +20,7 @@ const observer = new IntersectionObserver((entries) => {
 animateElements.forEach((element) => observer.observe(element));
 
 // Alterna o menu mobile ao clicar no botão
-mobileMenuBtn.addEventListener('click', () => {
+   mobileMenuBtn.addEventListener('click', () => {
     // Adiciona ou remove a classe 'active' do menu
     mobileNav.classList.toggle('active');
     // Alterna o ícone de hamburguer para 'x' e vice-versa
