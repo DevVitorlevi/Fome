@@ -5,12 +5,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins';
-    overflow-x: hidden;
-}
-
-.fa-bars,
-.fa-x {
-    padding: 20px;
 }
 
 :root {
@@ -22,6 +16,10 @@
     --blue-5: #83a3ff;
     --blue-6: #007fff;
     --base-font: 1rem;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 body {
