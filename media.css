@@ -1,5 +1,50 @@
-/* Header */
+@media screen and (max-width:1185px) {
+
+    /* Home */
+    #home {
+        min-height: 100%;
+        padding-top: 0;
+    }
+
+    #hero-image,
+    #hero-image img,
+    #home .background-shape {
+        display: none;
+    }
+
+    #call-to-action {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Menu */
+    #menu-items {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu-item-card {
+        width: calc(50% - 0.75rem);
+    }
+
+    /* Testimonials */
+    #testimonials {
+        flex-direction: column;
+    }
+
+    #chef-image {
+        width: 31.25rem;
+    }
+}
+
+/* ===================
+   Máx. 37.5rem 
+   =================== */
 @media screen and (max-width: 37.5rem) {
+
+    /* Mobile Nav */
     #mobile-nav {
         display: flex;
         flex-direction: column;
@@ -70,48 +115,8 @@
     .menu-overlay.active {
         opacity: 1;
     }
-}
 
-/* Home */
-@media screen and (max-width: 64rem) {
-    #home {
-        min-height: 100%;
-        padding-top: 0;
-    }
-
-    #hero-image,
-    #hero-image img,
-    #home .background-shape {
-        display: none;
-    }
-
-    #call-to-action {
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 28.125rem) {
-    #phone-btn button {
-        display: none;
-    }
-}
-
-/* Menu */
-@media screen and (max-width: 64rem) {
-    #menu-items {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .menu-item-card {
-        width: calc(50% - 0.75rem);
-    }
-}
-
-@media screen and (max-width: 37.5rem) {
+    /* Menu */
     .menu-item-card {
         width: 100%;
     }
@@ -119,21 +124,18 @@
     #food-menu .section-subtitle {
         text-align: center;
     }
-}
 
-/* Testimonials */
-@media screen and (max-width: 64rem) {
-    #testimonials {
-        flex-direction: column;
-    }
-
+    /* Testimonials */
     #chef-image {
-        width: 31.25rem;
+        display: none;
     }
 }
 
-@media screen and (max-width: 37.5rem) {
-    #chef-image {
+/* ===================
+   Máx. 28.125rem 
+   =================== */
+@media screen and (max-width: 28.125rem) {
+    #phone-btn button {
         display: none;
     }
 }
