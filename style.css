@@ -7,6 +7,11 @@
     font-family: 'Poppins';
 }
 
+.fa-bars,
+.fa-x {
+    padding: 5px;
+}
+
 :root {
     --white-card: #f9f9f9;
     --blue-1: #e4e8ff;
@@ -16,10 +21,6 @@
     --blue-5: #83a3ff;
     --blue-6: #007fff;
     --base-font: 1rem;
-}
-
-html {
-    overflow-x: hidden;
 }
 
 body {
