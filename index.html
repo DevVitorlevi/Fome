@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <nav id="main-nav">
+            <i class="fa-solid fa-burger" id="logo">food</i>
+            <ul id="nav-menu">
+                <li class="menu-item">
+                    <a href="#home">Inicio</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#food-menu">Cardapio</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#testimonials">Avaliações</a>
+                </li>
+            </ul>
+            <button class="primary-btn">Peça Aqui</button>
+
+            <button id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile-nav">
+            <ul id="mobile-menu-list">
+                <li class="menu-item">
+                    <a href="#home">Inicio</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#food-menu">Cardapio</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#testimonials">Avaliações</a>
+                </li>
+            </ul>
+            <button class="primary-btn">Peça Aqui</button>
+        </div>
+        <div class="menu-overlay"></div>
+    </header>
+
+    <main id="main-content">
+        <section id="home">
+            <div class="background-shape"></div>
+            <div id="call-to-action" class="animate-element">
+                <h1 class="main-title">O Sabor Que Vai Até <span>Você</span></h1>
+                <div id="action-buttons">
+                    <a href="" class="primary-btn">Ver Cardapio</a>
+                    <a href="tel:+555555555" id="phone-btn"><button class="primary-btn">
+                            <i class="fa-solid fa-phone"></i>
+                        </button>
+                        (88)98099-3629
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+            <div id="hero-image">
+                <img src="img/download.png" alt="">
+            </div>
+        </section>
+
+        <section id="food-menu" class="animate-element">
+            <h2 class="section-title">Cardápio</h2>
+            <h3 class="section-subtitle">Nossos Pratos Principais</h3>
+
+            <div id="menu-items">
+                <div class="menu-item-card">
+                    <div class="favorite-badge">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="img/dish.png" class="dish-image">
+                    <h3 class="dish-name">Bowl Saudável</h3>
+                    <span class="dish-description">Camarões grelhados, legumes frescos, arroz ou quinoa, e
+                        gergelim.</span>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(200+)</span>
+                    </div>
+                    <div class="price-container">
+                        <h4>R$32,00</h4>
+                        <button class="primary-btn">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item-card">
+                    <div class="favorite-badge">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="img/dish2.png" class="dish-image">
+                    <h3 class="dish-name">Sanduíche Tostado</h3>
+                    <span class="dish-description">Pão crocante com queijo, carne ou frango e vegetais.</span>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(500+)</span>
+                    </div>
+                    <div class="price-container">
+                        <h4>R$25,00</h4>
+                        <button class="primary-btn">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item-card">
+                    <div class="favorite-badge">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="img/dish3.png" class="dish-image">
+                    <h3 class="dish-name">Tigela de Smoothie</h3>
+                    <span class="dish-description">Smoothie verde com frutas, sementes e lascas de coco.</span>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(100+)</span>
+                    </div>
+                    <div class="price-container">
+                        <h4>R$15,00</h4>
+                        <button class="primary-btn">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="menu-item-card">
+                    <div class="favorite-badge">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <img src="img/dish4.png" class="dish-image">
+                    <h3 class="dish-name">Macarrão Asiático</h3>
+                    <span class="dish-description">Macarrão salteado com camarões, tomates e cebolinha.</span>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <span>(800+)</span>
+                    </div>
+                    <div class="price-container">
+                        <h4>R$38,00</h4>
+                        <button class="primary-btn">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <img src="img/chef.png" alt="" id="chef-image" class="animate-element">
+            <div id="testimonials-content">
+                <h2 class="section-title">Depoimentos</h2>
+                <h3 class="section-subtitle">O Que Os Clientes Falam Sobre Nós</h3>
+                <div id="reviews" class="animate-element">
+                    <div class="review-card">
+                        <img src="img/avatar.png" alt="" class="reviewer-avatar">
+                        <div class="review-content">
+                            <p>Bruna Kele</p>
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </span>
+                            <p>"Mais um exemplo da genialidade da Chef Maria José! Os camarões são perfeitamente
+                                temperados,
+                                e o macarrão salteado com legumes é um espetáculo de sabores. Um prato que demonstra a
+                                paixão do chef pela culinária."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="footer-content">
+            <span id="copyright">
+                &copy 2025 Vitor Levi
+            </span>
+
+            <div class="social-links">
+                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
