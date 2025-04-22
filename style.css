@@ -30,64 +30,188 @@ body {
     font-size: var(--base-font);
 }
 
-/* Header */
+/* Estilos do cabeçalho */
 header {
-    width: 100%;
-    padding: 1.75rem 8%;
+    background-color: #2c3e50;
+    padding: 1rem 2rem;
     position: sticky;
     top: 0;
-    background-color: var(--blue-1);
-    z-index: 3333;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-#main-nav {
-    width: 100%;
+.nav-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-#logo {
-    font-size: 1.5rem;
-    color: var(--blue-6);
+.logo {
+    color: #ecf0f1;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
 }
 
-#nav-menu {
+/* Menu desktop (visível em telas grandes) */
+.desktop-menu {
     display: flex;
     list-style: none;
-    gap: 3rem;
 }
 
-.menu-item {
+.desktop-menu li {
+    margin-left: 2rem;
+}
+
+.desktop-menu a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
     position: relative;
 }
 
-.menu-item a {
-    text-decoration: none;
-    color: #1d1d1dad;
-    font-weight: 600;
+.desktop-menu a:hover {
+    color: #3498db;
 }
 
-.menu-item:after {
+.desktop-menu a::after {
     content: '';
-    height: 0.3125rem;
-    width: 0;
-    background-color: var(--blue-5);
-    border-radius: 0.625rem;
     position: absolute;
-    bottom: -0.125rem;
-    right: 0;
-    transition: 2s;
-}
-
-.menu-item:hover:after {
-    width: 100%;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    bottom: 0;
     left: 0;
+    transition: width 0.3s ease;
 }
 
-#mobile-menu-btn,
-#mobile-nav {
+.desktop-menu a:hover::after {
+    width: 100%;
+}
+
+/* Checkbox oculto que controla o menu */
+#menu-toggle {
     display: none;
+}
+
+/* Botão hamburguer */
+.menu-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.menu-button span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ecf0f1;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Menu mobile (oculto por padrão) */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: #2c3e50;
+    padding: 6rem 2rem 2rem;
+    transition: right 0.4s ease;
+    z-index: 100;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-menu ul {
+    list-style: none;
+}
+
+.mobile-menu li {
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+}
+
+.mobile-menu a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    color: #3498db;
+}
+
+/* Quando o menu está aberto (checkbox marcado) */
+#menu-toggle:checked~.mobile-menu {
+    right: 0;
+}
+
+#menu-toggle:checked~.mobile-menu li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#menu-toggle:checked~.mobile-menu li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+#menu-toggle:checked~.mobile-menu li:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+#menu-toggle:checked~.mobile-menu li:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+#menu-toggle:checked~.mobile-menu li:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+/* Animação do botão hamburguer para X */
+#menu-toggle:checked~.menu-button span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+#menu-toggle:checked~.menu-button span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked~.menu-button span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Overlay quando o menu está aberto */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 33;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#menu-toggle:checked~.menu-overlay {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* Home */
