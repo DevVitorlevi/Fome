@@ -1,3 +1,63 @@
+@media screen and (max-width:420px) {
+    #phone-btn button {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .menu-item-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0.5rem 0;
+    }
+
+    /* O resto do seu CSS para 600px pode permanecer igual */
+    #food-menu .section-subtitle {
+        text-align: center;
+    }
+
+    #menu-items {
+        flex-direction: column;
+        /* Garante disposição em coluna */
+        align-items: center;
+        /* Centraliza os cards */
+        padding: 0 1rem;
+        /* Adiciona um pequeno padding nas laterais */
+    }
+
+    /* O resto do seu CSS para 600px pode permanecer igual */
+    #food-menu .section-subtitle {
+        text-align: center;
+    }
+
+    /* Testimonials */
+    #chef-image {
+        display: none;
+    }
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+
+    .menu-button {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none;
+    }
+
+    .menu-overlay {
+        display: none;
+    }
+}
+
 @media screen and (max-width:1185px) {
 
     /* Home */
@@ -36,55 +96,5 @@
 
     #chef-image {
         width: 31.25rem;
-    }
-}
-
-/* ===================
-   Máx. 37.5rem 
-   =================== */
-@media screen and (max-width: 600px) {
-
-    /* Menu */
-    .menu-item-card {
-        width: 100%;
-    }
-
-    #food-menu .section-subtitle {
-        text-align: center;
-    }
-
-    /* Testimonials */
-    #chef-image {
-        display: none;
-    }
-}
-
-/* ===================
-   Máx. 28.125rem 
-   =================== */
-@media screen and (max-width: 28.125rem) {
-    #phone-btn button {
-        display: none;
-    }
-}
-
-/* Media queries para responsividade */
-@media (max-width: 768px) {
-    .desktop-menu {
-        display: none;
-    }
-
-    .menu-button {
-        display: flex;
-    }
-}
-
-@media (min-width: 769px) {
-    .mobile-menu {
-        display: none;
-    }
-
-    .menu-overlay {
-        display: none;
     }
 }

@@ -14,40 +14,32 @@
 
 <body>
     <header>
-        <nav id="main-nav">
-            <i class="fa-solid fa-burger" id="logo">fomee!!</i>
-            <ul id="nav-menu">
-                <li class="menu-item">
-                    <a href="#home">Inicio</a>
-                </li>
-                <li class="menu-item">
-                    <a href="#food-menu">Cardapio</a>
-                </li>
-                <li class="menu-item">
-                    <a href="#testimonials">Avaliações</a>
-                </li>
-            </ul>
-            <button class="primary-btn">Peça Aqui</button>
+        <div class="nav-container">
+            <a href="#" class="logo"><i class="fa-solid fa-burger">fome!!</i></a>
 
-            <button id="mobile-menu-btn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </nav>
-        <div id="mobile-nav">
-            <ul id="mobile-menu-list">
-                <li class="menu-item">
-                    <a href="#home">Inicio</a>
-                </li>
-                <li class="menu-item">
-                    <a href="#food-menu">Cardapio</a>
-                </li>
-                <li class="menu-item">
-                    <a href="#testimonials">Avaliações</a>
-                </li>
+            <ul class="desktop-menu">
+                <li><a href="#">Início</a></li>
+                <li><a href="#food-menu">Cardápio</a></li>
+                <li><a href="#testimonials">Avaliações</a></li>
             </ul>
-            <button class="primary-btn">Peça Aqui</button>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="mobile-menu">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Cardápio</a></li>
+                    <li><a href="#">Avaliações</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu-overlay"></div>
         </div>
-        <div class="menu-overlay"></div>
     </header>
 
     <main id="main-content">
@@ -77,7 +69,6 @@
         <section id="food-menu" class="animate-element">
             <h2 class="section-title">Cardápio</h2>
             <h3 class="section-subtitle">Nossos Pratos Principais</h3>
-
             <div id="menu-items">
                 <div class="menu-item-card">
                     <div class="favorite-badge">
