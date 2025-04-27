@@ -1,8 +1,3 @@
-// Pega os elementos do HTML
-const mobileMenuBtn = document.getElementById('mobile-menu-btn')
-const mobileNav = document.getElementById('mobile-nav')
-const burgerIcon = document.querySelector('.fa-bars')
-const menuOverlay = document.querySelector('.menu-overlay')
 const animateElements = document.querySelectorAll('.animate-element')
 const btnTop = document.getElementById('btnTop')
 
@@ -33,9 +28,3 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observa todos os elementos com a classe 'animate-element'
 animateElements.forEach((element) => observer.observe(element))
-// Fecha o menu ao clicar fora dele (no fundo escuro)
-menuOverlay.addEventListener('click', () => {
-  menuOverlay.classList.remove('active')
-  mobileNav.classList.remove('active')
-  burgerIcon.classList.replace('fa-x', 'fa-bars')
-})
