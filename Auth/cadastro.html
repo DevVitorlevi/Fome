@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastre-se</h1>
+            <form id="form">
+                    <div class="inputs">
+                        <input type="text" id="name" name="name" placeholder="Nome" class="input">
+                        <span class="required">Nome Inválido</span>
+                    </div>
+
+                    <div class="inputs">
+                        <input type="text" id="email" name="email" placeholder="E-mail" class="input">
+                        <span class="required">E-mail Inválido</span>
+
+                    </div>
+
+                    <div class="inputs">
+                        <input type="password" id="senha" name="senha" placeholder="Senha" class="input">
+                        <span class="required">Senha Deve Conter Letras e Numeros</span>
+                        <span class="required">Senha Deve Conter no Minimo 8 Caracteres</span>
+                    </div>
+                    <div class="inputs">
+                        <input type="password" id="confirmsenha" name="confirmsenha" placeholder="Confirme a Senha" class="input">
+                        <span class="required">Senhas Não Coincidem</span>
+                    </div>
+                <input type="submit" value="Cadastrar" class="submit">
+                
+            </form>
+            <a href="login.html" class="link">Ja Possui Conta? Entre</a>
+    </div>
+</body>
+</html>
