@@ -5,10 +5,10 @@ const required = [...document.querySelectorAll('.required')]
 //Ações
 document.addEventListener('keydown', ev => {
     if (ev.key === 'Enter') {
-        impedirEnvio(evt)
+        impedirEnvio(ev)
     }
 })
-form.addEventListener('submit', impedirEnvio)
+form.addEventListener('submit', impedirEnvio)   
 inputs[0].addEventListener('input', ValidarNome)
 inputs[1].addEventListener('input', ValidarEmail)
 inputs[2].addEventListener('input', ValidarSenha)
@@ -32,7 +32,7 @@ function Noterror(indice) {
 }
 
 function ValidarNome(){
-    if(inputs[0].value.length < 3){
+    if(inputs[0].value.trim().length < 3){
         return Casoerror(0)
     }
     return Noterror(0)
@@ -48,27 +48,21 @@ function ValidarEmail() {
 
 function ValidarSenha() {
     const senha = inputs[2].value;
-    const contemLetra = /[a-zA-Z]/.test(senha);
-    const contemNumero = /[0-9]/.test(senha);
     const senhaEhCurta = senha.length < 8;
 
     if (senhaEhCurta) {
-        return Casoerror(3)
-    }
-
-    if (!contemLetra || !contemNumero) {
         return Casoerror(2)
     }
 
-    Noterror(2);
+   return Noterror(2);
 }
 
 
 
 function ValidarConfirmSenha() {
     if (inputs[2].value == inputs[3].value && inputs[3].value.length >= 8) {
-        return Noterror(4)
+        return Noterror(3)
     } else {
-        Casoerror(4)
+        Casoerror(3)
     }
 }
