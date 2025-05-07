@@ -35,6 +35,9 @@
     #chef-image {
         display: none;
     }
+    #fodase{
+        width: 100%;
+    }
 }
 
 /* Media queries para responsividade */

@@ -529,3 +529,12 @@ section {
 #btnTop:hover {
     background-color: var(--blue-3);
 }
+
+#fodase{
+    background-color: var(--blue-6);
+    padding: .8rem;
+    color: var(--blue-1);
+    border: 0;
+    border-radius: .8rem;
+    cursor: pointer;
+}
