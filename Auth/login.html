@@ -10,11 +10,15 @@
     <div class="container">
         <h1>Login</h1>
             <form id="form">
-                    <input type="text" id="email" name="email" placeholder="email" class="input">
-                    <input type="password" id="senha" name="senha" placeholder="Senha" class="input">
+                    <div class="inputs">
+                        <input type="text" id="email" name="email" placeholder="email" class="input">
+                        <span class="required">E-mail Inválido</span>
+                    </div>
+                    <div class="inputs"><input type="password" id="senha" name="senha" placeholder="Senha" class="input"></div>
                 <input type="submit" value="Login" class="submit" class="input">
             </form>
             <a href="cadastro.html" class="link">Es Novo? Cadastre-se</a>
     </div>
+    <script src="validarLogin.js"></script>
 </body>
 </html>

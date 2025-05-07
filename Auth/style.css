@@ -41,7 +41,7 @@ h1{
 #form{
     display: flex;
     flex-direction: column;
-    gap: 2.4rem;
+    gap: 1.4rem;
 
 }
 
@@ -66,6 +66,8 @@ h1{
     font-weight: 600;
 }
 .required{
+    text-align: left;
+    margin-top: .4rem;
     color: red;
     display: none;
 }
