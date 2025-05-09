@@ -1,9 +1,22 @@
 const api = 'http://localhost:3000/api';
 
+// Função global para flash message
+function showFlashMessage(mensagem, tipo = 'success') {
+  const flash = document.getElementById('flash-message');
+  if (!flash) return;
+
+  flash.textContent = mensagem;
+  flash.className = `flash ${tipo}`;
+
+  setTimeout(() => {
+    flash.classList.add('hidden');
+  }, 3000);
+}
+
 // Cadastro
 const formCadastro = document.getElementById('form-cadastro');
 if (formCadastro) {
-  formCadastro.addEventListener('submit', async (e) => {    
+  formCadastro.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const nome = document.getElementById('nome').value;
@@ -11,20 +24,15 @@ if (formCadastro) {
     const senha = document.getElementById('senha').value;
 
     try {
-      console.log('Tentando cadastrar...', { nome, email, senha });
       const cadastroResponse = await axios.post(`${api}/cadastro`, { nome, email, senha });
-      console.log('Cadastro response:', cadastroResponse.data);
-      
-      // Após cadastro, já realiza o login automático
-      console.log('Tentando login automático...');
+      showFlashMessage(cadastroResponse.data.mensagem, 'success');
+
       const loginResponse = await axios.post(`${api}/login`, { email, senha });
-      console.log('Login response:', loginResponse.data);
-      
       localStorage.setItem('user', JSON.stringify(loginResponse.data.usuario));
-      window.location.href = '../Home/HomePage.html'; // Ajuste conforme necessário
+      window.location.href = '../Home/HomePage.html';
     } catch (err) {
-      console.error('Erro detalhado:', err);
-      alert(err.response?.data?.mensagem || 'Erro no cadastro');
+      const msg = err.response?.data?.mensagem || 'Erro no cadastro';
+      showFlashMessage(msg, 'error');
     }
   });
 }
@@ -43,7 +51,8 @@ if (formLogin) {
       localStorage.setItem('user', JSON.stringify(res.data.usuario));
       window.location.href = '../Home/HomePage.html';
     } catch (err) {
-      alert(err.response.data.mensagem || 'Erro no login');
+      const msg = err.response?.data?.mensagem || 'Erro no login';
+      showFlashMessage(msg, 'error');
     }
   });
 }

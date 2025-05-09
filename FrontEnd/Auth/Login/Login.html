@@ -17,37 +17,32 @@
 <body>
     <div class="container">
         <div class="content-1">
-            <h1>Bem-Vindo!</h1>
+            <h1>Olá Amigo!</h1>
         </div>
         <div class="content-2">
-            <h1>Criar Conta</h1>
-            <form id="form-cadastro">
+            <h1>Entre</h1>
+            <form id="form-login">
                 <div class="inputs">
-                    <input type="text" id="nome" placeholder="Nome" class="input" />
-                    <p class="required">Nome Inválido</p>
-                    <i class="bi bi-person-fill"></i>
-                </div>
-                <div class="inputs">
-                    <input type="text" id="email" placeholder="Email" class="input" />
+                    <input type="text" id="loginEmail" placeholder="Email" class="input" />
                     <p class="required">E-mail Inválida</p>
                     <i class="bi bi-envelope-at-fill"></i>
                 </div>
                 <div class="inputs">
-                    <input type="password" id="senha" placeholder="Senha" class="input" />
+                    <input type="password" id="loginSenha" placeholder="Senha" class="input" />
                     <p class="required">Senha de 8 digitos</p>
                     <i class="bi bi-eye"></i>
                     <i class="bi bi-key-fill"></i>
                 </div>
                 <button type="submit" class="button">Cadastrar</button>
             </form>
-            <a href="../Login/Login.html">Ja possui Conta? Entre</a>
+            <a href="../Cadastro/Cadastro.html">Novo Por Aqui? Faça sua Conta</a>
         </div>
     </div>
     <div id="flash-message" class="flash hidden"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../utils/api.js"></script>
-    <script src="../scripts/validarCadastro.js"></script>
+    <script src="../scripts/validarLogin.js"></script>
 </body>
 
 </html>

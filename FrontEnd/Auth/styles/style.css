@@ -127,3 +127,44 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.flash {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 250px;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background-color: var(--blue-6);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    animation: slideDown 0.4s ease;
+}
+
+.flash.error {
+    background-color: #ff4d4d;
+}
+
+.flash.success {
+    background-color: #28a745;
+}
+
+.flash.hidden {
+    display: none;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
