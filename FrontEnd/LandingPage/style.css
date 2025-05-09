@@ -535,6 +535,12 @@ section {
     padding: .8rem;
     color: var(--blue-1);
     border: 0;
+    font-size: 1rem;
     border-radius: .8rem;
     cursor: pointer;
+    transition: ease .4s;
+}
+
+#fodase:hover {
+    transform: scale(1.1);
 }
