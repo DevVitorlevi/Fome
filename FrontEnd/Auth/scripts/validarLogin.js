@@ -32,7 +32,7 @@ function notError(i){
 }
 
 function validarEmail(){
-    if(emailRegex.test(Inputs[1].value)){
+    if(emailRegex.test(Inputs[0].value)){
         return notError(0);
     }
     return error(0);

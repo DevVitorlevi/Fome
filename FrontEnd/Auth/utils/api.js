@@ -1,5 +1,5 @@
 const api = 'http://localhost:3000/api';
-
+const home  = require('../../Home/HomePage.html')
 // Função global para flash message
 function showFlashMessage(mensagem, tipo = 'success') {
   const flash = document.getElementById('flash-message');
@@ -29,7 +29,7 @@ if (formCadastro) {
 
       const loginResponse = await axios.post(`${api}/login`, { email, senha });
       localStorage.setItem('user', JSON.stringify(loginResponse.data.usuario));
-      window.location.href = '../Home/HomePage.html';
+      window.location.href = '../../Home/HomePage.html';
     } catch (err) {
       const msg = err.response?.data?.mensagem || 'Erro no cadastro';
       showFlashMessage(msg, 'error');

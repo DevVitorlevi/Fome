@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 const db = require('../dataBase/conn');
 
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
 exports.register = async (req, res) => {
     const { nome, email, senha } = req.body;
@@ -88,5 +88,8 @@ exports.login = (req, res) => {
             }
         });
     });
+};
+exports.getHome = (req, res) => {
+    res.status(200).json({ mensagem: 'Bem-vindo à Home!' });
 };
 
