@@ -26,7 +26,7 @@ body {
 
 .container {
     padding: 1rem;
-    width: 90vw;
+    width: 100vw;
 }
 
 .content-1 {
@@ -69,7 +69,7 @@ form {
 }
 
 .input {
-    width: 60vw;
+    width: 80vw;
     padding: .6rem;
     font-size: 1.2rem;
     border-radius: .7rem;

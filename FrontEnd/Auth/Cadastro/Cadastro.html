@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Cadastro</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/media.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,18 +23,18 @@
             <h1>Criar Conta</h1>
             <form id="form-cadastro">
                 <div class="inputs">
-                    <input type="text" id="nome" placeholder="Nome" required class="input" />
+                    <input type="text" id="nome" placeholder="Nome" class="input" />
                     <p class="required">Nome Inválido</p>
                     <i class="bi bi-person-fill"></i>
                 </div>
                 <div class="inputs">
-                    <input type="email" id="email" placeholder="Email" required class="input" />
+                    <input type="text" id="email" placeholder="Email" class="input" />
                     <p class="required">E-mail Inválida</p>
                     <i class="bi bi-envelope-at-fill"></i>
                 </div>
                 <div class="inputs">
-                    <input type="password" id="senha" placeholder="Senha" required class="input" />
-                    <p class="required">Senha Deve Conter 8 caracteres</p>
+                    <input type="password" id="senha" placeholder="Senha" class="input" />
+                    <p class="required">Senha de 8 digitos</p>
                     <i class="bi bi-eye"></i>
                     <i class="bi bi-key-fill"></i>
                 </div>
@@ -45,7 +45,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="script.js"></script>
+    <script src="../utils/api.js"></script>
+    <script src="../scripts/validarCadastro.js"></script>
 </body>
 
 </html>
