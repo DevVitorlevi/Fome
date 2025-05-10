@@ -1,5 +1,5 @@
 const api = 'http://localhost:3000/api';
-
+const login = require('../Login/Login.html')
 function showFlashMessage(mensagem, tipo = 'success') {
   const flash = document.getElementById('flash-message');
   if (!flash) return;
@@ -58,6 +58,19 @@ if (formLogin) {
     }
   });
 }
+
+// Logout
+function logout() {
+
+  localStorage.removeItem('user');
+  localStorage.removeItem('token');
+  window.location.href = '../Login/Login.html';
+}
+const logoutButton = document.getElementById('logout-button');
+if (logoutButton) {
+  logoutButton.addEventListener('click', logout);
+}
+
 
 // Home
 const userInfo = JSON.parse(localStorage.getItem('user'));
