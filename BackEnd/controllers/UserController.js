@@ -1,6 +1,5 @@
 const bcrypt = require('bcrypt');
 const db = require('../dataBase/conn');
-
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
 exports.register = async (req, res) => {
@@ -8,15 +7,15 @@ exports.register = async (req, res) => {
 
     // Validações
     if (!nome || nome.trim().length < 3) {
-        return res.status(400).json({ mensagem: 'Nome deve ter pelo menos 3 caracteres.' });
+        return res.status(422).json({ mensagem: 'Nome deve ter pelo menos 3 caracteres.' });
     }
 
     if (!email || !emailRegex.test(email)) {
-        return res.status(400).json({ mensagem: 'Email inválido.' });
+        return res.status(422).json({ mensagem: 'Email inválido.' });
     }
 
     if (!senha || senha.length < 8) {
-        return res.status(400).json({ mensagem: 'A senha deve ter pelo menos 8 caracteres.' });
+        return res.status(422).json({ mensagem: 'A senha deve ter pelo menos 8 caracteres.' });
     }
 
     // Verificar se o email já existe
@@ -27,7 +26,7 @@ exports.register = async (req, res) => {
         }
 
         if (results.length > 0) {
-            return res.status(400).json({ mensagem: 'Email já cadastrado!' });
+            return res.status(422).json({ mensagem: 'Email já cadastrado!' });
         }
 
         try {
@@ -56,11 +55,11 @@ exports.login = (req, res) => {
     const { email, senha } = req.body;
 
     if (!email || !emailRegex.test(email)) {
-        return res.status(400).json({ mensagem: 'Email inválido.' });
+        return res.status(422).json({ mensagem: 'Email inválido.' });
     }
 
     if (!senha || senha.length < 8) {
-        return res.status(400).json({ mensagem: 'Senha inválida.' });
+        return res.status(422).json({ mensagem: 'Senha inválida.' });
     }
 
     db.query('SELECT * FROM usuarios WHERE email = ?', [email], async (err, results) => {
@@ -77,7 +76,7 @@ exports.login = (req, res) => {
         const senhaValida = await bcrypt.compare(senha, user.senha);
 
         if (!senhaValida) {
-            return res.status(401).json({ mensagem: 'Senha incorreta.' }); // AQUI
+            return res.status(401).json({ mensagem: 'Senha incorreta.' }); 
         }
 
         res.status(200).json({
