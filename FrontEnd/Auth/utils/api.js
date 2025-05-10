@@ -1,11 +1,10 @@
 const api = 'http://localhost:3000/api';
-const login = require('../Login/Login.html')
 function showFlashMessage(mensagem, tipo = 'success') {
   const flash = document.getElementById('flash-message');
   if (!flash) return;
 
   flash.textContent = mensagem;
-  flash.className = `flash ${tipo}`; // Isso substitui inclusive a 'hidden'
+  flash.className = `flash ${tipo}`;
   
   // Remove a classe 'hidden' se ainda estiver
   flash.classList.remove('hidden');
@@ -64,14 +63,12 @@ function logout() {
 
   localStorage.removeItem('user');
   localStorage.removeItem('token');
-  window.location.href = '../Login/Login.html';
+  window.location.href = '../Auth/Login/Login.html';
 }
 const logoutButton = document.getElementById('logout-button');
 if (logoutButton) {
   logoutButton.addEventListener('click', logout);
 }
-
-
 // Home
 const userInfo = JSON.parse(localStorage.getItem('user'));
 if (userInfo) {
