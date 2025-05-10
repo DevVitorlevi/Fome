@@ -69,12 +69,13 @@ const logoutButton = document.getElementById('logout-button');
 if (logoutButton) {
   logoutButton.addEventListener('click', logout);
 }
+
 // Home
 const userInfo = JSON.parse(localStorage.getItem('user'));
 if (userInfo) {
   const nomeSpan = document.getElementById('user-nome');
   const emailSpan = document.getElementById('user-email');
 
-  if (nomeSpan) nomeSpan.textContent = `Olá, ${userInfo.nome}`;
-  if (emailSpan) emailSpan.textContent = userInfo.email;
+  if (nomeSpan) nomeSpan.innerHTML = `Seja Bem-Vindo, ${userInfo.nome} Ao <span> Restaurante Fome!! </span>`;
+  if (emailSpan) emailSpan.innerHTML = userInfo.email;
 }
