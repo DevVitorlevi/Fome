@@ -1,12 +1,14 @@
 const api = 'http://localhost:3000/api';
-const home  = require('../../Home/HomePage.html')
-// Função global para flash message
+
 function showFlashMessage(mensagem, tipo = 'success') {
   const flash = document.getElementById('flash-message');
   if (!flash) return;
 
   flash.textContent = mensagem;
-  flash.className = `flash ${tipo}`;
+  flash.className = `flash ${tipo}`; // Isso substitui inclusive a 'hidden'
+  
+  // Remove a classe 'hidden' se ainda estiver
+  flash.classList.remove('hidden');
 
   setTimeout(() => {
     flash.classList.add('hidden');
@@ -31,7 +33,7 @@ if (formCadastro) {
       localStorage.setItem('user', JSON.stringify(loginResponse.data.usuario));
       window.location.href = '../../Home/HomePage.html';
     } catch (err) {
-      const msg = err.response?.data?.mensagem || 'Erro no cadastro';
+      const msg = err.response?.data?.mensagem || 'Erro no cadastro (sem mensagem detalhada)';
       showFlashMessage(msg, 'error');
     }
   });
