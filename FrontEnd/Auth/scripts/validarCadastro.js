@@ -52,3 +52,13 @@ function validarSenha(){
     }
     return notError(2);
 }
+
+mostrarSenha.addEventListener('click', ()=>{
+    if (Inputs[2].type === 'password'){
+        Inputs[2].setAttribute('type', 'text')
+        mostrarSenha.classList.replace('bi-eye', 'bi-eye-slash')
+    } else {
+        Inputs[2].setAttribute('type', 'password')
+        mostrarSenha.classList.replace('bi-eye-slash', 'bi-eye')
+    }
+})

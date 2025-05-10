@@ -81,7 +81,7 @@ form {
 .bi-eye,
 .bi-eye-slash {
     position: absolute;
-    right: .4rem;
+    right: .6rem;
     top: .5rem;
     font-size: 1.6rem;
     color: var(--blue-3);

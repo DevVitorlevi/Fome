@@ -44,3 +44,13 @@ function validarSenha(){
     }
     return notError(1);
 }
+
+mostrarSenha.addEventListener('click', ()=>{
+    if (Inputs[1].type === 'password'){
+        Inputs[1].setAttribute('type', 'text')
+        mostrarSenha.classList.replace('bi-eye', 'bi-eye-slash')
+    } else {
+        Inputs[1].setAttribute('type', 'password')
+        mostrarSenha.classList.replace('bi-eye-slash', 'bi-eye')
+    }
+})
