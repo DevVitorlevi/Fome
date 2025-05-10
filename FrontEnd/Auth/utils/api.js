@@ -51,7 +51,7 @@ if (formLogin) {
     try {
       const res = await axios.post(`${api}/login`, { email, senha });
       localStorage.setItem('user', JSON.stringify(res.data.usuario));
-      window.location.href = '../Home/HomePage.html';
+      window.location.href = '../../Home/HomePage.html';
     } catch (err) {
       const msg = err.response?.data?.mensagem || 'Erro no login';
       showFlashMessage(msg, 'error');

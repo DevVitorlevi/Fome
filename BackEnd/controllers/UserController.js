@@ -1,7 +1,9 @@
 const bcrypt = require('bcrypt');
 const db = require('../dataBase/conn');
+const jwt = require('jsonwebtoken');
 
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const JWT_SECRET = 'segredo-de-token';
 
 exports.register = async (req, res) => {
     const { nome, email, senha } = req.body;
@@ -77,19 +79,44 @@ exports.login = (req, res) => {
         const senhaValida = await bcrypt.compare(senha, user.senha);
 
         if (!senhaValida) {
-            return res.status(401).json({ mensagem: 'Senha incorreta.' }); // AQUI
+            return res.status(401).json({ mensagem: 'Senha incorreta.' });
         }
+
+        // Gerar JWT
+        const token = jwt.sign(
+            { id: user.id, nome: user.nome, email: user.email },
+            JWT_SECRET,
+            { expiresIn: '1h' } 
+        );
 
         res.status(200).json({
             mensagem: 'Login realizado com sucesso!',
             usuario: {
                 nome: user.nome,
                 email: user.email
-            }
+            },
+            token 
         });
     });
 };
+
 exports.getHome = (req, res) => {
     res.status(200).json({ mensagem: 'Bem-vindo à Home!' });
 };
 
+// Middleware para verificar o token
+exports.authMiddleware = (req, res, next) => {
+    const token = req.headers['authorization'];
+
+    if (!token) {
+        return res.status(401).json({ mensagem: 'Token não fornecido.' });
+    }
+
+    jwt.verify(token, JWT_SECRET, (err, decoded) => {
+        if (err) {
+            return res.status(403).json({ mensagem: 'Token inválido.' });
+        }
+        req.user = decoded;
+        next();
+    });
+};
