@@ -25,30 +25,21 @@ body {
 }
 
 .container {
-    padding: 1rem;
-    width: 100vw;
+    padding: 2rem;
 }
 
 .content-1 {
-    padding: 2rem;
-    background-color: var(--blue-6);
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    text-align: center;
-    color: #ffffff;
-
+    display: none;
 }
 
 .content-2 {
     background-color: white;
     padding: 1rem;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    border-radius: 1rem;
 }
 
 .content-2 h1 {
@@ -69,7 +60,7 @@ form {
 }
 
 .input {
-    width: 80vw;
+    width: 75vw;
     padding: .6rem;
     font-size: 1.2rem;
     border-radius: .7rem;
@@ -156,6 +147,7 @@ a:hover {
 .flash.hidden {
     display: none;
 }
+
 
 @keyframes slideDown {
     from {
