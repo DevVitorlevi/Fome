@@ -5,11 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seu Perfil</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <button id="logout-button">Sair da Sua Conta</button>
-    <script src="../Auth/utils/api.js"></script>
+    <div class="container">
+        <h1>Seu Perfil</h1>
+        <ul>
+            <li id="user-name"></li>
+            <li id="user-email"></li>
+        </ul>
+        <button id="logout-button">Sair da Sua Conta</button>
+    </div>
 </body>
+<script src="../Auth/utils/api.js"></script>
 
 </html>

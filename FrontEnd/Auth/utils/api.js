@@ -70,12 +70,16 @@ if (logoutButton) {
   logoutButton.addEventListener('click', logout);
 }
 
-// Home
+// Home e Profile
 const userInfo = JSON.parse(localStorage.getItem('user'));
 if (userInfo) {
   const nomeSpan = document.getElementById('user-nome');
   const emailSpan = document.getElementById('user-email');
+  const showName = document.getElementById('user-name');
 
   if (nomeSpan) nomeSpan.innerHTML = `Seja Bem-Vindo, ${userInfo.nome} Ao <span> Restaurante Fome!! </span>`;
-  if (emailSpan) emailSpan.innerHTML = userInfo.email;
+  if (emailSpan) emailSpan.innerHTML = `E-mail: ${userInfo.email}`;
+  if (showName) showName.innerHTML =`Nome: ${userInfo.nome}`;
+
+
 }
