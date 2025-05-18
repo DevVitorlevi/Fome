@@ -134,6 +134,7 @@ a:hover {
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
     z-index: 999;
     animation: slideDown 0.4s ease;
+    text-align: center;
 }
 
 .flash.error {
