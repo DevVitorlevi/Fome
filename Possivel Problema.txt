@@ -11,4 +11,4 @@ Basta Exucutar o POWERSHELL como ADMINISTRADOR e rodar esse comandos no terminal
 2- Start-Process powershell -verb runAS
 3- Set-ExecutionPolicy unrestricted
 
-Apos isso seu Problema estara resolvido 
+Apos isso seu Problema estará resolvido 
