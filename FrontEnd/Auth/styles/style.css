@@ -57,7 +57,13 @@ form {
 
 .inputs {
     position: relative;
+    transition: margin-bottom 0.3s ease;
 }
+
+.inputs.margin-for-regras {
+    margin-bottom: 10rem;
+}
+
 
 .input {
     width: 75vw;
@@ -160,4 +166,57 @@ a:hover {
         opacity: 1;
         transform: translate(-50%, 0);
     }
+}
+
+
+.senha-regras {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-radius: 0.6rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #333;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.senha-regras.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.senha-regras ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.senha-regras li {
+    margin: 0.4rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.senha-regras .icon {
+    margin-right: 0.6rem;
+    font-size: 1.2rem;
+}
+
+.senha-regras .red {
+    color: #ff4d4d;
+}
+
+.senha-regras .green {
+    color: #28a745;
+}
+
+.hidden {
+    display: none;
 }
