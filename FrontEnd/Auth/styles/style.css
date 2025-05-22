@@ -82,6 +82,7 @@ form {
     top: .5rem;
     font-size: 1.6rem;
     color: var(--blue-3);
+    cursor: pointer;
 }
 
 .bi-person-fill,
