@@ -27,10 +27,12 @@ if (formCadastro) {
     try {
       const cadastroResponse = await axios.post(`${api}/cadastro`, { nome, email, senha });
       showFlashMessage(cadastroResponse.data.mensagem, 'success');
+      setTimeout(async () => {
+        const loginResponse = await axios.post(`${api}/login`, { email, senha });
+        localStorage.setItem('user', JSON.stringify(loginResponse.data.usuario));
+        window.location.href = '../../Home/HomePage.html';
+      }, 2000);
 
-      const loginResponse = await axios.post(`${api}/login`, { email, senha });
-      localStorage.setItem('user', JSON.stringify(loginResponse.data.usuario));
-      window.location.href = '../../Home/HomePage.html';
     } catch (err) {
       const msg = err.response?.data?.mensagem || 'Erro no cadastro (sem mensagem detalhada)';
       showFlashMessage(msg, 'error');

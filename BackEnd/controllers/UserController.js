@@ -88,7 +88,3 @@ exports.login = (req, res) => {
         });
     });
 };
-exports.getHome = (req, res) => {
-    res.status(200).json({ mensagem: 'Bem-vindo à Home!' });
-};
-
