@@ -6,8 +6,6 @@ const mostrarSenha = document.querySelector('.bi-eye');
 
 Form.addEventListener('submit', impedirEnvio);
 Inputs[0].addEventListener('input', validarEmail);
-Inputs[1].addEventListener('input', validarSenha);
-
 function impedirEnvio(e){
     e.preventDefault();
     validarNome();
@@ -36,13 +34,6 @@ function validarEmail(){
         return notError(0);
     }
     return error(0);
-}
-
-function validarSenha(){
-    if(Inputs[1].value.length < 8 ){
-        return error(1);
-    }
-    return notError(1);
 }
 
 mostrarSenha.addEventListener('click', ()=>{

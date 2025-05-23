@@ -530,7 +530,7 @@ section {
     background-color: var(--blue-3);
 }
 
-#fodase {
+#cadastro {
     background-color: var(--blue-6);
     padding: .8rem;
     color: var(--blue-1);
@@ -541,6 +541,6 @@ section {
     transition: ease .4s;
 }
 
-#fodase:hover {
+#cadastro:hover {
     transform: scale(1.1);
 }

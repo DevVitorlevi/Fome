@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fome!! | Restaurante</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,42 +19,53 @@
 
     <header>
         <h1><i class="fa-solid fa-burger">fome!!</i></h1>
-        <nav>
-            <a href="assets/Cardapio Fome!!.pdf" download>Cardápio</a>
-        </nav>
+        <ul class="menu-header">
+            <li><a href="assets/Cardapio Fome!!.pdf" download>Cardápio</a></li>
+
+            <li class="profile-hover-area">
+                <a href="../Profile/Profile.html">Perfil</a>
+
+                <div class="profile-dropdown">
+                    <ul>
+                        <li id="user-name"></li>
+                        <li id="user-email"></li>
+                    </ul>
+                    <button id="logout-button">Sair da Sua Conta</button>
+                </div>
+            </li>
+        </ul>
     </header>
+
 
     <section class="hero">
         <h2>Fome!! – Quando o sabor chama mais alto</h2>
     </section>
 
     <section class="section" id="menu">
-        <h3>Nosso Cardápio</h3>
+        <h3>Pratos Principais</h3>
         <div class="menu-items">
             <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1604908554165-9363dc66f06f" alt="Hambúrguer artesanal">
-                <h4>Hambúrguer Artesanal</h4>
-                <p>Pão artesanal, carne suculenta, queijo derretido e muito sabor!</p>
+                <img src="assets/dish2.png" alt="Hambúrguer artesanal">
+                <h4>Sanduíche Artesanal</h4>
+                <p>Pão artesanal, Frango desfiado, queijo derretido e muito sabor!</p>
             </div>
             <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1606788075760-9f9275a5e3df" alt="Pizza marguerita">
-                <h4>Pizza Marguerita</h4>
-                <p>Molho especial, queijo derretido e manjericão fresco.</p>
+                <img src="assets/dish4.png">
+                <h4>Macarrão Com Camarões</h4>
+                <p>Macarrão Refogado e Camarões grelhados</p>
             </div>
             <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Prato executivo">
+                <img src="assets/dish.png" alt="Prato executivo">
                 <h4>Prato Executivo</h4>
                 <p>Arroz, feijão, carne grelhada e salada – completo e delicioso.</p>
             </div>
         </div>
     </section>
-    <footer id="contato">
+    <footer>
         <h3>Fome!! Restaurante</h3>
-        <p>Rua das Delícias, 123 – Icapuí, CE</p>
-        <p>Contato: (88) 99999-9999 | fome@email.com</p>
         <p>&copy; 2025 Fome!!. Todos os direitos reservados.</p>
     </footer>
-
+    <script src="../Auth/utils/api.js"></script>
 </body>
 
 </html>

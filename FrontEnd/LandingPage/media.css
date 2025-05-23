@@ -12,35 +12,29 @@
         margin: 0.5rem 0;
     }
 
-    /* O resto do seu CSS para 600px pode permanecer igual */
     #food-menu .section-subtitle {
         text-align: center;
     }
 
     #menu-items {
         flex-direction: column;
-        /* Garante disposição em coluna */
         align-items: center;
-        /* Centraliza os cards */
         padding: 0 1rem;
-        /* Adiciona um pequeno padding nas laterais */
     }
 
-    /* O resto do seu CSS para 600px pode permanecer igual */
     #food-menu .section-subtitle {
         text-align: center;
     }
 
-    /* Testimonials */
     #chef-image {
         display: none;
     }
-    #fodase{
+
+    #cadastro {
         width: 100%;
     }
 }
 
-/* Media queries para responsividade */
 @media (max-width: 768px) {
     .desktop-menu {
         display: none;

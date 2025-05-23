@@ -30,7 +30,7 @@
             <h1>Criar Conta</h1>
             <form id="form-cadastro">
                 <div class="inputs">
-                    <input type="text" id="nome" placeholder="Nome" class="input" />
+                    <input type="text" id="nome" placeholder="Nome" class="input" maxlength="15" />
                     <p class="required">Nome Inválido</p>
                     <i class="bi bi-person-fill"></i>
                 </div>
@@ -45,7 +45,6 @@
                     <i class="bi bi-eye"></i>
                     <i class="bi bi-key-fill"></i>
 
-                    <!-- Container das regras de senha -->
                     <div id="senha-regras" class="senha-regras hidden">
                         <ul>
                             <li id="rule-uppercase"><i class="bi bi-x-circle-fill icon red"></i> Deve conter letra
