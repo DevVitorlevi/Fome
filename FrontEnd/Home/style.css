@@ -49,28 +49,12 @@ header h1 {
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s ease;
-    padding: 0.5rem 0;
+    padding: 5rem 5rem;
     position: relative;
 }
 
 .menu-header a:hover {
     color: var(--blue-6);
-}
-
-.menu-header a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 5px;
-    border-radius: 5px;
-    background: var(--blue-6);
-    bottom: 0;
-    left: 0;
-    transition: width 0.3s ease;
-}
-
-.menu-header a:hover::after {
-    width: 100%;
 }
 
 .hero {
